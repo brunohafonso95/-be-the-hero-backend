@@ -9,11 +9,9 @@
 
 * add create and list functions to grantees resource ([09d9cc3](https://github.com/brunohafonso95/be-the-hero-backend/commit/09d9cc3b026aeb5c615a7298102f1dc5b537796d))
 * add create and list functions to incidents resource ([155abbd](https://github.com/brunohafonso95/be-the-hero-backend/commit/155abbdd3acf067d01cb1a99348f66736896bfe2))
+* add delete function to incidents resource ([5d1be2b](https://github.com/brunohafonso95/be-the-hero-backend/commit/5d1be2b8b29619e0683f2d468e7dc5ca88e7daa2))
 * add git hooks config to the project ([42234c0](https://github.com/brunohafonso95/be-the-hero-backend/commit/42234c01b00d56f78fef8fc5f5dcf1de4aaf4908))
 * add knex configuration to the project ([e6ab4e4](https://github.com/brunohafonso95/be-the-hero-backend/commit/e6ab4e426c4d32c663124050485c200d5dca9ec9))
-
-### FEAT
-
 * base structure of the project ([bf4158b](https://github.com/brunohafonso95/be-the-hero-backend/commit/bf4158bbad4cf1bdf742b7fe24056f29b9822bfa))
 
 ### improvement
