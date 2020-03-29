@@ -71,6 +71,7 @@ typings/
 .env
 .env.test
 .env.development
+src/database/*.sqlite
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
