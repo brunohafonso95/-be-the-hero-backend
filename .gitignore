@@ -70,12 +70,14 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.env.development
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
 # next.js build output
 .next
+lint.html
 
 # nuxt.js build output
 .nuxt

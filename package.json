@@ -1,49 +1,59 @@
 {
-  "name": "be-the-hero-backend",
-  "version": "1.0.0",
-  "description": "Application to share people or cases that need donation",
-  "main": "src/index.js",
-  "repository": "https://github.com/brunohafonso95/-be-the-hero-backend",
-  "author": "Bruno Afonso",
-  "license": "MIT",
-  "scripts": {
-    "commit": "git-cz",
-    "start:dev": "nodemon --ignore __tests__",
-    "lint": "eslint --fix -f html -o lint.html ./",
-    "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
-    "test": "jest",
-    "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "sh .githooks/checkBranchName && lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    "name": "be-the-hero-backend",
+    "version": "1.0.0",
+    "description": "Application to share people or cases that need donation",
+    "main": "src/index.js",
+    "repository": "https://github.com/brunohafonso95/be-the-hero-backend",
+    "author": "Bruno Afonso",
+    "license": "MIT",
+    "scripts": {
+        "commit": "git-cz",
+        "start:dev": "nodemon --ignore __tests__",
+        "lint": "eslint --fix -f html -o lint.html ./",
+        "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
+        "test": "jest",
+        "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "sh .githooks/checkBranchName && lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix -f html -o lint.html",
+            "git add"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.3",
+        "@commitlint/config-conventional": "^8.3.3",
+        "clean-jsdoc-theme": "^2.2.11",
+        "commitizen": "^4.0.3",
+        "cz-conventional-changelog": "3.0.2",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-import-helpers": "^1.0.2",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.3",
+        "lint-staged": "^9.5.0",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "http-status": "^1.4.2",
+        "knex": "^0.20.13",
+        "sqlite3": "^4.1.1"
     }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix -f html -o lint.html",
-      "git add"
-    ]
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^8.3.3",
-    "@commitlint/config-conventional": "^8.3.3",
-    "clean-jsdoc-theme": "^2.2.11",
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "3.0.2",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-import-helpers": "^1.0.2",
-    "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.3",
-    "lint-staged": "^9.5.0",
-    "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
-  },
-  "dependencies": {
-    "dotenv": "^8.2.0"
-  }
 }
