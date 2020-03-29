@@ -9,5 +9,6 @@ routes.post('/grantees', granteeController.create);
 routes.get('/grantees', granteeController.getAll);
 routes.post('/incidents', incidentController.create);
 routes.get('/incidents', incidentController.getAll);
+routes.delete('/incidents/:id', incidentController.delete);
 
 module.exports = routes;
