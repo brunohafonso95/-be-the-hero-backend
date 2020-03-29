@@ -77,6 +77,7 @@ typings/
 
 # next.js build output
 .next
+lint.html
 
 # nuxt.js build output
 .nuxt
