@@ -13,5 +13,5 @@ Application developed during rocketseat ommnistack 11 with the aim of sharing ca
 - Winston
 - Swagger
 - Swagger stats
-- Sequelize
-- Postgres
+- Knex
+- sqlite
