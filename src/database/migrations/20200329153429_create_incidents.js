@@ -4,11 +4,11 @@ exports.up = knex =>
         table.string('title').notNullable();
         table.string('description').notNullable();
         table.float('value').notNullable();
-        table.string('grantee_id');
+        table.string('grantee_id').notNullable();
         table
             .foreign('grantee_id')
             .references('id')
-            .inTable('grantess');
+            .inTable('grantees');
         table.timestamps(true, true);
     });
 
