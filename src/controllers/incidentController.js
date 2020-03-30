@@ -31,7 +31,20 @@ module.exports = {
 
     async getAll(req, res) {
         try {
-            const incidents = await connection('incidents').select('*');
+            const { page = 1, pagesize = 5 } = req.query;
+            const [incidentsCount] = await connection('incidents').count();
+            const incidents = await connection('incidents')
+                .join('grantees', 'grantees.id', '=', 'incidents.grantee_id')
+                .limit(pagesize)
+                .offset((page - 1) * pagesize)
+                .select([
+                    'incidents.*',
+                    'grantees.email',
+                    'grantees.whatsapp',
+                    'grantees.city',
+                    'grantees.uf',
+                ]);
+            res.header('X-Total-Count', incidentsCount['count(*)']);
             return res.json(incidents);
         } catch (error) {
             console.error(error.message);

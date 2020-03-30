@@ -12,6 +12,7 @@
 * add create session to sessions resouce ([f80f4c9](https://github.com/brunohafonso95/be-the-hero-backend/commit/f80f4c9ecc0bff47eaab3df2495bb05acc92edd9))
 * add delete function to incidents resource ([5d1be2b](https://github.com/brunohafonso95/be-the-hero-backend/commit/5d1be2b8b29619e0683f2d468e7dc5ca88e7daa2))
 * add git hooks config to the project ([42234c0](https://github.com/brunohafonso95/be-the-hero-backend/commit/42234c01b00d56f78fef8fc5f5dcf1de4aaf4908))
+* add incidents pagination and join to grantees resource ([78790ed](https://github.com/brunohafonso95/be-the-hero-backend/commit/78790ede667458ea6613005edb6af49f5f477eaa))
 * add knex configuration to the project ([e6ab4e4](https://github.com/brunohafonso95/be-the-hero-backend/commit/e6ab4e426c4d32c663124050485c200d5dca9ec9))
 * add the list profile incidents function ([b59124a](https://github.com/brunohafonso95/be-the-hero-backend/commit/b59124a1a66f5fe49802e7ecf165cccc83fcdae0))
 * base structure of the project ([bf4158b](https://github.com/brunohafonso95/be-the-hero-backend/commit/bf4158bbad4cf1bdf742b7fe24056f29b9822bfa))
